@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio | Jorge Alcántara</title>
+  <meta name="description" content="Jorge Alcántara's portfolio as a Biostatistician and Data Scientist." />
+  <meta name="author" content="Jorge Alcántara" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -67,57 +70,69 @@
     .btn:hover {
       background: #005b99;
     }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      margin-bottom: 6px;
+    }
   </style>
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
   <header>
     <h1>Jorge Alcántara</h1>
     <nav>
-      <a href="#sobre-mi">Sobre mí</a>
-      <a href="#proyectos">Proyectos</a>
-      <a href="#contacto">Contacto</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <div class="container">
-    <section id="sobre-mi" class="section">
-      <h2>Sobre mí</h2>
-      <p>Biostatistician & Data Scientist. Trabajo con R, Python y SAS ayudando a equipos de investigación a publicar sus estudios y validar datos clínicos. Este es un resumen de algunos proyectos destacados.</p>
-      <a class="btn" href="cv.pdf" target="_blank">Descargar CV</a>
+    <section id="about" class="section">
+      <h2>About Me</h2>
+      <p>I am a Biostatistician and Data Scientist with a strong background in clinical trials, vaccine R&D, and data validation. I work primarily with R, SAS, and Python, helping research teams deliver regulatory-compliant, high-quality results. Below are some of my open-source projects and tools.</p>
+      <a class="btn" href="cv.pdf" target="_blank">Download CV</a>
     </section>
 
-    <section id="proyectos" class="section">
-      <h2>Proyectos</h2>
+    <section id="projects" class="section">
+      <h2>Featured Projects</h2>
 
       <div class="project">
-        <h3>Simulador de Ensayos Clínicos</h3>
-        <p>Aplicación en R Shiny para evaluar escenarios de potencia y tamaño muestral usando datos simulados.</p>
-        <a class="btn" href="https://github.com/jorales/simulador-ensayos" target="_blank">Ver en GitHub</a>
+        <h3>Clinical Trial Simulator (R)</h3>
+        <p>A Shiny-based simulation engine for clinical trials, helping estimate power and sample size across multiple designs and scenarios.</p>
+        <a class="btn" href="https://github.com/JorAlEs/clinical-trial-simulator-R" target="_blank">View on GitHub</a>
       </div>
 
       <div class="project">
-        <h3>Dashboard de Finanzas Personales</h3>
-        <p>Interfaz interactiva para el control de gastos, ahorro e ingresos mensuales usando tidyverse y plotly.</p>
-        <a class="btn" href="https://github.com/jorales/dashboard-finanzas" target="_blank">Ver en GitHub</a>
+        <h3>Word to PDF Converter</h3>
+        <p>Command-line tool to batch convert Word documents to PDF using LibreOffice. Ideal for document pipelines and automating submission formats.</p>
+        <a class="btn" href="https://github.com/JorAlEs/WordtoPDF" target="_blank">View on GitHub</a>
       </div>
 
-      <!-- Añade más proyectos copiando y pegando este bloque -->
+      <div class="project">
+        <h3>ModHeal - Modular Healing Data Tool</h3>
+        <p>A flexible framework to process, clean and validate healthcare datasets using R. Includes utilities for exploratory analysis and reporting.</p>
+        <a class="btn" href="https://github.com/JorAlEs/modheal" target="_blank">View on GitHub</a>
+      </div>
     </section>
 
-    <section id="contacto" class="section">
-      <h2>Contacto</h2>
-      <p>Puedes escribirme por correo o conectar en redes:</p>
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p>If you'd like to connect or collaborate, feel free to reach out:</p>
       <ul>
-        <li>Email: jorge.alcantara.espinosa@hotmail.com</li>
-        <li>LinkedIn: <a href="https://www.linkedin.com/in/jorge-alc%C3%A1ntara-espinosa-570055356/" target="_blank">Mi perfil de Linkedin</a></li>
-        <li>GitHub: <a href="https://github.com/jorales" target="_blank">github.com/jorales</a></li>
+        <li>Email: <a href="mailto:jorge.alcantara.espinosa@hotmail.com">jorge.alcantara.espinosa@hotmail.com</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/jorge-alc%C3%A1ntara-espinosa-570055356/" target="_blank">My LinkedIn Profile</a></li>
+        <li>GitHub: <a href="https://github.com/JorAlEs" target="_blank">github.com/JorAlEs</a></li>
       </ul>
     </section>
   </div>
 
   <footer>
-    © 2025 Jorge Alcántara – Portfolio personal
+    © 2025 Jorge Alcántara – Personal Portfolio
   </footer>
 </body>
 </html>
