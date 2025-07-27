@@ -1,142 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- STEP 0 — core meta -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio | Jorge Alcántara</title>
-  <meta name="description" content="Jorge Alcántara's portfolio as a Biostatistician and Data Scientist." />
+  <title>Jorge Alcántara | Biostatistician & Data Scientist</title>
+  <meta name="description" content="Portfolio, open‑source projects and publications." />
   <meta name="author" content="Jorge Alcántara" />
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+  <!-- STEP 1 — Open Graph / Twitter cards -->
+  <meta property="og:title" content="Jorge Alcántara | Biostatistician & Data Scientist">
+  <meta property="og:description" content="Portfolio, open‑source projects and publications.">
+  <meta property="og:url" content="https://jorales.github.io/Portfolio/">
+  <meta property="og:image" content="https://jorales.github.io/Portfolio/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- STEP 2 — JSON‑LD schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Jorge Alcántara",
+    "jobTitle": "Biostatistician & Data Scientist",
+    "url": "https://jorales.github.io/Portfolio/",
+    "sameAs": [
+      "https://github.com/JorAlEs",
+      "https://www.linkedin.com/in/jorge-alcántara-espinosa-570055356/"
+    ]
+  }
+  </script>
+
+  <!-- STEP 3 — styles (CSS variables + dark mode) -->
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f9f9f9;
-      color: #333;
+    :root{
+      --bg:#f9f9f9;
+      --fg:#333;
+      --accent:#007acc;
+      --accent-hover:#005b99;
+      --card:#fff;
+      --shadow:0 0 8px rgba(0,0,0,0.05);
+      --footer:#eee;
+    }
+    @media (prefers-color-scheme:dark){
+      :root{
+        --bg:#121212;
+        --fg:#e0e0e0;
+        --accent:#4dabf7;
+        --accent-hover:#3393e1;
+        --card:#1d1d1d;
+        --shadow:0 0 8px rgba(0,0,0,0.3);
+        --footer:#1a1a1a;
+      }
     }
 
-    header {
-      background-color: #222;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
+    /* base */
+    *{box-sizing:border-box}
+    body{font-family:Arial,Helvetica,sans-serif;margin:0;background:var(--bg);color:var(--fg)}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{color:var(--accent-hover)}
 
-    nav a {
-      color: #ddd;
-      margin: 0 10px;
-      text-decoration: none;
-    }
+    /* skip link */
+    .skip-link{position:absolute;left:-9999px}
+    .skip-link:focus{left:16px;top:16px;background:#fff;color:#000;padding:8px 12px;border-radius:4px;z-index:1000}
 
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 20px;
-    }
+    header{background:#222;color:#fff;padding:20px;text-align:center}
+    nav[aria-label="Primary"] a{color:#ddd;margin:0 10px}
+    .container{max-width:900px;margin:auto;padding:20px}
+    .section{margin-bottom:40px}
 
-    .section {
-      margin-bottom: 40px;
-    }
+    article.project{background:var(--card);padding:15px;border-radius:8px;box-shadow:var(--shadow);margin-bottom:20px}
+    article.project h3{margin:0 0 10px}
 
-    .project {
-      background: #fff;
-      padding: 15px;
-      border-radius: 8px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.05);
-      margin-bottom: 20px;
-    }
+    .btn{display:inline-block;margin-top:10px;padding:8px 16px;background:var(--accent);color:#fff;border-radius:5px}
+    .btn:hover{background:var(--accent-hover)}
 
-    .project h3 {
-      margin: 0 0 10px;
-    }
+    footer{text-align:center;padding:20px;background:var(--footer);font-size:0.9em}
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #eee;
-      font-size: 0.9em;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 8px 16px;
-      background: #007acc;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-
-    .btn:hover {
-      background: #005b99;
-    }
-
-    ul {
-      list-style-type: none;
-      padding-left: 0;
-    }
-
-    ul li {
-      margin-bottom: 6px;
-    }
+    ul{list-style:none;padding-left:0}
+    ul li{margin-bottom:6px}
   </style>
 </head>
 <body>
+  <!-- STEP 4 — skip‑to‑content -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <header>
-    <h1>Jorge Alcántara</h1>
-    <nav>
+    <h1>Jorge Alcántara</h1>
+    <nav aria-label="Primary">
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <div class="container">
+  <!-- STEP 5 — main landmark -->
+  <main id="main" tabindex="-1" class="container">
     <section id="about" class="section">
-      <h2>About Me</h2>
-      <p>I am a Biostatistician and Data Scientist with a strong background in clinical trials, vaccine R&D, and data validation. I work primarily with R, SAS, and Python, helping research teams deliver regulatory-compliant, high-quality results. Below are some of my open-source projects and tools.</p>
-      <a class="btn" href="./cv.pdf" target="_blank">Download CV</a>
+      <h2>About Me</h2>
+      <p>I am a Biostatistician and Data Scientist with a strong background in clinical trials, vaccine R&D, and data validation. I work primarily with R, SAS, and Python, helping research teams deliver regulatory‑compliant, high‑quality results. Below are some of my open‑source projects and tools.</p>
+      <a class="btn" href="./cv.pdf" target="_blank" rel="noopener">Download CV</a>
     </section>
 
     <section id="projects" class="section">
-      <h2>Featured Projects</h2>
+      <h2>Featured Projects</h2>
 
-      <div class="project">
-        <h3>Clinical Trial Simulator (R)</h3>
-        <p>A R-based simulation engine for clinical trials, helping generate clinical trial like dataset based on ADAM and CDSIC.</p>
-        <a class="btn" href="https://jorales.github.io/clinicalTrialSimulator/" target="_blank">View on GitHub</a>
-      </div>
+      <article class="project">
+        <h3>Clinical Trial Simulator (R) <span data-repo="JorAlEs/clinicalTrialSimulator"></span></h3>
+        <p>R‑based engine to simulate clinical‑trial datasets following ADaM & CDISC standards.</p>
+        <a class="btn" href="https://jorales.github.io/clinicalTrialSimulator/" target="_blank" rel="noopener">View on GitHub</a>
+      </article>
 
-      <div class="project">
-        <h3>Word to PDF Converter</h3>
-        <p>Command-line tool to batch convert Word documents to PDF using LibreOffice. Ideal for document pipelines and automating submission formats.</p>
-        <a class="btn" href="https://github.com/JorAlEs/WordtoPDF" target="_blank">View on GitHub</a>
-      </div>
+      <article class="project">
+        <h3>Word → PDF Converter <span data-repo="JorAlEs/WordtoPDF"></span></h3>
+        <p>Command‑line tool to batch convert Word documents to PDF using LibreOffice.</p>
+        <a class="btn" href="https://github.com/JorAlEs/WordtoPDF" target="_blank" rel="noopener">View on GitHub</a>
+      </article>
 
-      <div class="project">
-        <h3>ModHeal - Modular Healing Data Tool</h3>
-        <p>A flexible framework to process, clean and validate healthcare datasets using R. Includes utilities for exploratory analysis and reporting.</p>
-        <a class="btn" href="https://github.com/JorAlEs/modheal" target="_blank">View on GitHub</a>
-      </div>
+      <article class="project">
+        <h3>ModHeal – Modular Healthcare Data Tool <span data-repo="JorAlEs/modheal"></span></h3>
+        <p>Framework to process, clean and validate healthcare datasets in R, with exploratory analytics.</p>
+        <a class="btn" href="https://github.com/JorAlEs/modheal" target="_blank" rel="noopener">View on GitHub</a>
+      </article>
     </section>
 
     <section id="contact" class="section">
       <h2>Contact</h2>
-      <p>If you'd like to connect or collaborate, feel free to reach out:</p>
+      <p>If you'd like to connect or collaborate, feel free to reach out:</p>
       <ul>
         <li>Email: <a href="mailto:jorge.alcantara.espinosa@hotmail.com">jorge.alcantara.espinosa@hotmail.com</a></li>
-        <li>LinkedIn: <a href="https://www.linkedin.com/in/jorge-alc%C3%A1ntara-espinosa-570055356/" target="_blank">My LinkedIn Profile</a></li>
-        <li>GitHub: <a href="https://github.com/JorAlEs" target="_blank">github.com/JorAlEs</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/jorge-alc%C3%A1ntara-espinosa-570055356/" target="_blank" rel="noopener">My LinkedIn Profile</a></li>
+        <li>GitHub: <a href="https://github.com/JorAlEs" target="_blank" rel="noopener">github.com/JorAlEs</a></li>
       </ul>
     </section>
-  </div>
+  </main>
 
   <footer>
-    © 2025 Jorge Alcántara – Personal Portfolio
+    © 2025 Jorge Alcántara – Personal Portfolio
     <a href="https://hits.sh/jorales.github.io/Portfolio/">
-  <img alt="Hits" src="https://hits.sh/jorales.github.io/Portfolio.svg?style=flat-square&label=Visitors&color=007acc&labelColor=222">
-</a>
-
+      <img alt="Visitors" src="https://hits.sh/jorales.github.io/Portfolio.svg?style=flat-square&label=Visitors&color=007acc&labelColor=222" loading="lazy">
+    </a>
   </footer>
+
+  <!-- STEP 6 — GitHub star counter script -->
+  <script>
+  document.querySelectorAll('[data-repo]').forEach(async el=>{
+      try{
+        const r = await fetch(`https://api.github.com/repos/${el.dataset.repo}`);
+        if(r.ok){
+          const j = await r.json();
+          el.textContent = `★ ${j.stargazers_count}`;
+        }
+      }catch(e){
+        console.warn('GitHub API rate‑limited');
+      }
+  });
+  </script>
 </body>
 </html>
